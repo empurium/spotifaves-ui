@@ -143,7 +143,6 @@ import TestPage from 'containers/TestPage/Loadable';
  history                                           3.2.1  →                  3.3.0
  react                                            15.4.2  →                 15.5.4
  react-dom                                        15.4.2  →                 15.5.4
- react-intl                                        2.2.3  →                  2.3.0
  redux-immutable                                  3.0.11  →                  3.1.0
  redux-saga                                       0.14.8  →                 0.15.3
  babel-cli                                        6.22.2  →                 6.24.1

@@ -30,7 +30,6 @@
   - [ImmutableJS](js/immutablejs.md)
   - [reselect](js/reselect.md)
   - [redux-saga](js/redux-saga.md)
-  - [i18n](js/i18n.md)
   - [routing](js/routing.md)
 - [Maintenance](maintenance)
   - [Dependency Update](maintenance/dependency.md)
