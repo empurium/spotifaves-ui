@@ -6,6 +6,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -19,6 +20,7 @@ export default function App() {
           content="See the new releases by your favorite artists on Spotify."
         />
       </Helmet>
+      <CssBaseline />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route component={NotFoundPage} />
