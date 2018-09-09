@@ -142,6 +142,7 @@
   "dependencies": {
     "@material-ui/core": "^3.0.2",
     "@material-ui/icons": "^3.0.1",
+    "assert": "^1.4.1",
     "babel-polyfill": "6.26.0",
     "chalk": "^2.4.1",
     "compression": "1.7.2",
@@ -157,6 +158,7 @@
     "lodash": "4.17.10",
     "minimist": "1.2.0",
     "prop-types": "15.6.1",
+    "query-string": "5",
     "react": "16.4.1",
     "react-dom": "16.4.1",
     "react-helmet": "5.2.0",
