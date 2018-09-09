@@ -4,24 +4,41 @@
  */
 
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import shuffle from 'lodash/shuffle';
+
+import ImageGrid from 'components/ImageGrid';
+import Hero from 'components/Hero';
+import SpotifyButton from 'components/SpotifyButton';
+import images from './images';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
-  login() {
-    // Will move this hardcoding soon...
-    window.location = 'http://spotifaves.test:8080/auth/spotify';
+  // Will move this hardcoding soon...
+  authUrl = 'http://spotifaves.test:8080/auth/spotify';
+
+  constructor(props) {
+    super(props);
+
+    this.images = shuffle(images);
+
+    if (typeof document === 'object' && typeof document.getElementsByTagName === 'function') {
+      document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    }
   }
 
   render() {
     return (
-      <div>
-        <h2>Home</h2>
-        <br />
-        <Button variant="contained" color="primary" onClick={this.login}>
-          Login
-        </Button>
-      </div>
+      <ImageGrid images={this.images} bgColor="#000" opacity={0.45} centered>
+        <Hero
+          heroText="Spotify Favorites"
+          heroTagline="Find New Releases from the Artists you Follow."
+          centered
+        >
+          <SpotifyButton href={this.authUrl} marginTop={3.5}>
+            Login with Spotify
+          </SpotifyButton>
+        </Hero>
+      </ImageGrid>
     );
   }
 }
