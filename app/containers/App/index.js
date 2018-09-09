@@ -8,12 +8,9 @@ import { Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 
 import theme from 'containers/App/theme';
-import HomePage from 'containers/HomePage/Loadable';
+import RootPage from 'containers/RootPage';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 export default function App() {
@@ -27,15 +24,8 @@ export default function App() {
       </Helmet>
       <CssBaseline />
       <MuiThemeProvider theme={theme}>
-        <AppBar>
-          <Toolbar>
-            <Typography variant="title" color="inherit">
-              SpotiFaves
-            </Typography>
-          </Toolbar>
-        </AppBar>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={RootPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </MuiThemeProvider>

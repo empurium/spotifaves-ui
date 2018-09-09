@@ -23,7 +23,6 @@ injectGlobal`
     min-width: 100%;
     background-color: #222;
     color: #eee;
-    margin-top: 75px; /* Adjust for AppBar, probably a better way to do this */
   }
 
   p,
