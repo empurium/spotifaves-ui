@@ -56,7 +56,7 @@ export const getToken = () => {
     return getTokenFromLocalStorage();
   }
 
-  const { token } = getTokenFromHash();
+  const token = getTokenFromHash();
   if (token) {
     storeTokenLocalStorage(token);
 
@@ -89,7 +89,7 @@ const getTokenFromHash = () => {
     return false;
   }
 
-  const hash = queryString(window.location.hash);
+  const hash = queryString.parse(window.location.hash);
 
   return hash && hash.token ? hash.token : false;
 };
