@@ -3,7 +3,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 // Create our Material UI theme
 export default createMuiTheme({
   palette: {
-    primary: { main: '#00d95f' },
+    type: 'dark',
+    primary: { main: '#1ed760' }, // buttons before hover: #1db954
     secondary: { main: '#4caf50' },
   },
 });

@@ -6,8 +6,6 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
-    background-color: #222;
-    color: #eee;
   }
 
   body {
@@ -27,7 +25,6 @@ injectGlobal`
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
 `;
