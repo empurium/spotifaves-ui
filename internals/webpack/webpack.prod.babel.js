@@ -70,11 +70,11 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'React Boilerplate',
-      short_name: 'React BP',
-      description: 'My React Boilerplate-based project!',
-      background_color: '#fafafa',
-      theme_color: '#b1624d',
+      name: 'Spotify Favoritese',
+      short_name: 'SpotiFaves',
+      description: 'See the new releases by your favorite artists on Spotify.',
+      background_color: '#222',
+      theme_color: '#00d95f',
       icons: [
         {
           src: path.resolve('app/images/icon-512x512.png'),
