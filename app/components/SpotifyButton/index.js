@@ -5,16 +5,23 @@ import Typography from '@material-ui/core/Typography';
 
 const SpotifyButton = (props) => {
   const style = {
-    minWidth: '200px',
-    padding: '12px 50px',
-    borderRadius: '500px',
-    letterSpacing: '0.1em',
-    marginTop: props.marginTop ? `${props.marginTop}px` : null,
+    button: {
+      minWidth: '200px',
+      padding: '12px 50px',
+      borderRadius: '500px',
+      letterSpacing: '0.1em',
+      marginTop: props.marginTop ? `${props.marginTop}px` : null,
+    },
+    typography: {
+      fontWeight: 'bold',
+    },
   };
 
   return (
-    <Button variant="contained" color="secondary" href={props.href} style={style}>
-      <Typography variant="button">{props.children}</Typography>
+    <Button variant="contained" color="secondary" href={props.href} style={style.button}>
+      <Typography variant="button" style={style.typography}>
+        {props.children}
+      </Typography>
     </Button>
   );
 };
