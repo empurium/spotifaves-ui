@@ -32,9 +32,10 @@ export default class HomePage extends React.PureComponent {
         <Hero
           heroText="Spotify Favorites"
           heroTagline="Find New Releases from the Artists you Follow."
+          color="white"
           centered
         >
-          <SpotifyButton href={this.authUrl} marginTop={3.5}>
+          <SpotifyButton href={this.authUrl} marginTop={50}>
             Login with Spotify
           </SpotifyButton>
         </Hero>
