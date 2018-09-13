@@ -1,25 +1,18 @@
 version: 0.2
 
-env:
-  variables:
-    PATH: ./node_modules/.bin:$PATH
-
 phases:
   install:
     commands:
-      - echo Install phase...
-  pre_build:
-    commands:
-      - echo Pre-build phase...
-      - echo $PATH
       - npm install
+      #- npm install -g rimraf webpack@4
   build:
     commands:
       - echo Build started on `date`
-      - npm run build
-  post_build:
-    commands:
-      - echo Build completed on `date`
+      - echo PATH=./node_modules/.bin:$PATH
+      - PATH=./node_modules/.bin:$PATH npm run build
+cache:
+  paths:
+    - 'node_modules/**/*'
 artifacts:
   files:
     - build/*
