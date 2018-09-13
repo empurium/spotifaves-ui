@@ -4,16 +4,13 @@ phases:
   install:
     commands:
       - npm install
-      #- npm install -g rimraf webpack@4
   build:
     commands:
-      - echo Build started on `date`
-      - echo PATH=./node_modules/.bin:$PATH
       - PATH=./node_modules/.bin:$PATH npm run build
 cache:
   paths:
     - 'node_modules/**/*'
 artifacts:
   files:
-    - build/*
+    - build/**/*
   name: spotifaves-ui-$(date +%Y-%m-%d)
