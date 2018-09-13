@@ -7,9 +7,6 @@ phases:
   build:
     commands:
       - PATH=./node_modules/.bin:$PATH npm run build
-cache:
-  paths:
-    - 'node_modules/**/*'
 artifacts:
   files:
     - build/**/*
