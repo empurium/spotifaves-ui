@@ -11,6 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Pre-build phase...
+      - echo $PATH
       - npm install
   build:
     commands:
