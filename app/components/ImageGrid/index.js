@@ -37,7 +37,15 @@ const ImageGrid = (props) => {
               offset={props.imageWidth || defaultWidth}
               once
             >
-              {(onload) => <img src={image.src} onLoad={onload} alt={image.alt || ''} />}
+              {(onload) => (
+                <img
+                  src={image.src}
+                  onLoad={onload}
+                  width={style.gridListItem.width}
+                  height={style.gridListItem.height}
+                  alt={image.alt || ''}
+                />
+              )}
             </FadeIn>
           </li>
         ))}

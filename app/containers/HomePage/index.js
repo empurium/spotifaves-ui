@@ -28,7 +28,14 @@ export default class HomePage extends React.PureComponent {
 
   render() {
     return (
-      <ImageGrid images={this.images} bgColor="#000" opacity={0.45} centered>
+      <ImageGrid
+        images={this.images}
+        bgColor="#000"
+        opacity={0.45}
+        imageWidth={320}
+        imageHeight={320}
+        centered
+      >
         <Hero
           heroText="Spotify Favorites"
           heroTagline="Find New Releases from the Artists you Follow."
