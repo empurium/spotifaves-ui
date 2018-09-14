@@ -10,5 +10,4 @@ phases:
 artifacts:
   files:
     - build/**/*
-  name: spotifaves-ui-$(date +%Y-%m-%d)
   discard-paths: yes
