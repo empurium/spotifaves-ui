@@ -25,6 +25,11 @@ const ImageGrid = (props) => {
     },
   };
 
+  const staggeredLoad = (onload) => {
+    const staggered = props.staggered ? Math.floor(Math.random() * Math.floor(props.staggered)) : 0;
+    setTimeout(onload, staggered);
+  };
+
   return (
     <ImageGridContainer>
       {props.children ? props.children : ''}
@@ -40,7 +45,7 @@ const ImageGrid = (props) => {
               {(onload) => (
                 <img
                   src={image.src}
-                  onLoad={onload}
+                  onLoad={() => staggeredLoad(onload)}
                   width={style.gridListItem.width}
                   height={style.gridListItem.height}
                   alt={image.alt || ''}
@@ -64,6 +69,7 @@ ImageGrid.propTypes = {
   bgColor: PropTypes.string,
   opacity: PropTypes.number,
   centered: PropTypes.bool,
+  staggered: PropTypes.number,
   imageWidth: PropTypes.number,
   imageHeight: PropTypes.number,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),

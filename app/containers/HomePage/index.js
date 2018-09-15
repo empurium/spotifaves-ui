@@ -34,6 +34,7 @@ export default class HomePage extends React.PureComponent {
         opacity={0.45}
         imageWidth={320}
         imageHeight={320}
+        staggered={750}
         centered
       >
         <Hero
